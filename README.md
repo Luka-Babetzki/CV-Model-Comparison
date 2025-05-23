@@ -4,7 +4,7 @@ A simple Python project to compare two popular computer vision models for pedest
 
 ## Features
 
-- Loads a sample image from the Penn Fudan Pedestrian dataset
+- Loads all images from the Penn Fudan Pedestrian dataset
 - Detects pedestrians using:
   - HoG + SVM (OpenCV)
   - Faster R-CNN (PyTorch/Torchvision)
@@ -26,21 +26,27 @@ A simple Python project to compare two popular computer vision models for pedest
     pip install opencv-python scikit-image torch torchvision
     ```
 
-2. **Download the Penn Fudan Pedestrian dataset** and place it in `../lab9 data/PennFudanPed` relative to the scripts.
+2. **Download the Penn Fudan Pedestrian dataset** and place it in a folder, e.g. `c:/path/to/PennFudanPed/PNGImages`.
 
-3. **Run the HoG model:**
+3. **Update the `images_folder` variable** at the top of both `HoG Model.py` and `Faster R-CNN Model.py` to the path where your dataset images are stored:
+
+    ```python
+    images_folder = 'c:/path/to/PennFudanPed/PNGImages'  # Update this path as needed
+    ```
+
+4. **Run the HoG model:**
 
     ```sh
     python "HoG Model.py"
     ```
 
-4. **Run the Faster R-CNN model:**
+5. **Run the Faster R-CNN model:**
 
     ```sh
     python "Faster R-CNN Model.py"
     ```
 
-Each script will display the original image and the detection results.
+Each script will process and display the detection results for every image in the dataset folder.
 
 ## Notes
 
