@@ -1,4 +1,5 @@
-#### HoG Model ####
+# ****** HoG Model ******
+
 import cv2
 from skimage import feature, exposure
 import os
@@ -35,9 +36,9 @@ else:
     # ****** Person detection ******
     # HOG feature description
     hog = cv2.HOGDescriptor()
-    # build SVM detector
+    # Build SVM detector
     hog.setSVMDetector(cv2.HOGDescriptor_getDefaultPeopleDetector())
-    # detect pedestrians
+    # Detect pedestrians
     (rects, weights) = hog.detectMultiScale(grayimg,
                                             winStride=(4, 4),
                                             padding=(8, 8),

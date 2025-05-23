@@ -3,6 +3,7 @@
 import cv2
 from skimage import feature, exposure
 import os
+import torchvision
 
 # Model creating
 print("Creating model")
